@@ -3,7 +3,7 @@ import { prisma } from "@/db/prisma";
 import { revalidatePath } from "next/cache";
 
 export async function createBooking(flightId: string, price: number) {
-    const userId = "9a1a805c-a6c6-4b76-9111-ac20849c7fea";
+    const userId = "5e9e2033-cbf5-4cfa-9e9a-7c1647462bf6";
 
     try {
         await new Promise((resolve) => {
@@ -20,6 +20,7 @@ export async function createBooking(flightId: string, price: number) {
                 status: "confirmed"
             }
         })
+
 
         revalidatePath("/")
 
